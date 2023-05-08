@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import cita from './componentes/Cita'
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
         >
           Learn React
         </a>
+        <Cita nro="1"/>
+        <Cita nro="2"/>
+        <Cita nro="3"/>
+        <Cita nro="4"/>
       </header>
     </div>
   );
