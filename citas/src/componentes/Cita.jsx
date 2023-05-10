@@ -5,11 +5,4 @@ const Cita = (props) => {
         </div>
     )
 }
-const titulo = (props) => {
-    return(
-        <div>
-           <h1>{props.titulos}</h1> 
-        </div>
-    )
-}
-export default Cita; titulo;
+export default Cita
