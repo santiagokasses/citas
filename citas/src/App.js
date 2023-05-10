@@ -7,9 +7,7 @@ import Boton from './componentes/Boton'
 
 function App() {
   return (
-    
     <body>
-      <div className="App">
         <div id="root">
           <header className="App-header">
             <Titulos titulos="ADMINISTRADOR DE PACIENTES" />
@@ -19,14 +17,20 @@ function App() {
                   <Subtitulos subtitulos="Crear mi Cita" />
                   <form>
                     <Formulario formulario="Nombre Mascota"/>
+                    <input type="text" name="propietario" class="u-full-width" placeholder="Nombre dueño de la mascota" value=""/>
                     <Formulario formulario="Nombre Dueño"/>
+                    <input type="date" name="fecha" class="u-full-width" value=""/>
                     <Formulario formulario="Fecha"/>
+                    <input type="date" name="fecha" class="u-full-width" value=""/>
                     <Formulario formulario="hora"/>
+                    <input type="time" name="hora" class="u-full-width" value=""/>
                     <Formulario formulario="Sintomas"/>
+                    <textarea name="sintomas" class="u-full-width"></textarea>
+                    <button type="submit" class="u-full-width button-primary">Agregar Cita</button>
                   </form>
                 </div>
                 <div class="one-half column">
-                  <Subtitulos text="Administra tus citas"/>
+                  <Subtitulos subtitulos="Administra tus citas"/>
                   <div class="cita">
                     <Texto text="Mascota: " textdos="Blacky"/>
                     <Texto text="Dueño: " textdos="Jere"/>
@@ -56,10 +60,6 @@ function App() {
             </div>
           </header>
         </div>
-      </div>
-      <script src="/static/js/bundle.js"></script>
-      <script src="/static/js/vendors~main.chunk.js"></script>
-      <script src="/static/js/main.chunk.js"></script>
     </body>
   )
 }
