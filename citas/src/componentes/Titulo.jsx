@@ -1,7 +1,7 @@
 const Titulo = (props) => {
     return(
         <div>
-           <h1>{props.Titulos}</h1> 
+           <h1>{props.titulos}</h1> 
         </div>
     )
 }
