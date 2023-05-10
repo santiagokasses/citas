@@ -1,8 +1,2 @@
-const Subtitulos = (props) => {
-    return(
-        <div>
-            <h2>{props.subtitulos}</h2>
-        </div>
-    )
-}
+const Subtitulos = (props) => {return(<h2>{props.subtitulos}</h2>)}
 export default Subtitulos
