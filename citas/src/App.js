@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'
 import Titulos from './componentes/Titulo'
 import Subtitulos from './componentes/Subtitulos'
 import Formulario from './componentes/Formulario'
@@ -7,6 +7,7 @@ import Boton from './componentes/Boton'
 
 function App() {
   return (
+    
     <body>
       <div className="App">
         <div id="root">
@@ -56,6 +57,9 @@ function App() {
           </header>
         </div>
       </div>
+      <script src="/static/js/bundle.js"></script>
+      <script src="/static/js/vendors~main.chunk.js"></script>
+      <script src="/static/js/main.chunk.js"></script>
     </body>
   )
 }
