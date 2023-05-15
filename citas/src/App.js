@@ -15,13 +15,19 @@ function App() {
               <div class="row">
                 <div class="one-half column">
                   <Subtitulos subtitulos="Crear mi Cita" />
-                  <Formulario>
-                    <Formulario mascota="Nombre Mascota"/>
-                    <Formulario nombre="Nombre Dueño"/>
-                    <Formulario fecha="Fecha"/>
-                    <Formulario hora="hora"/>
-                    <Formulario sintoma="Sintomas"/>
-                  </Formulario>
+                  <form>
+                    <Formulario formulario="Nombre Mascota"/>
+                    <input type="text" name="mascota" class="u-full-width" placeholder="Nombre Mascota" value=""/>
+                    <Formulario formulario="Nombre Dueño"/>
+                    <input type="text" name="propietario" class="u-full-width" placeholder="Nombre dueño de la mascota" value=""/>
+                    <Formulario formulario="Fecha"/>
+                    <input type="date" name="fecha" class="u-full-width" value=""/>
+                    <Formulario formulario="hora"/>
+                    <input type="time" name="hora" class="u-full-width" value=""/>
+                    <Formulario formulario="Sintomas"/>
+                    <textarea name="sintomas" class="u-full-width"></textarea>
+                    <button type="submit" class="u-full-width button-primary">Agregar Cita</button>
+                  </form>
                 </div>
                 <div class="one-half column">
                   <Subtitulos subtitulos="Administra tus citas"/>
