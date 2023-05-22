@@ -13,7 +13,6 @@ body {
 
 h1,
 h2 {
-  
   color: white;
   padding: 3rem 0;
   text-align: center;
@@ -25,7 +24,6 @@ h2 {
 }
 
 .lista-citas .media {
-  
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 3rem;
 }
@@ -35,7 +33,6 @@ h2 {
 }
 
 .lista-citas .media-body p {
-  
   margin: 0;
 }
 
@@ -44,19 +41,15 @@ h2 {
 }
 
 .lista-citas .media-body span {
-  
   font-weight: bold;
 }
 
 label {
-  font-size: 66.5%!important;
   color: white;
 }
 
 input[type="date"],
-input[type="time"],
-input[type="text"] {
-  font-size: 66.5%!important;
+input[type="time"] {
   height: 38px;
   padding: 6px 10px;
   background-color: #fff;
@@ -67,7 +60,6 @@ input[type="text"] {
 }
 
 .cita {
-  font-size: 66.5%!important;
   padding: 2rem;
   background: white;
   border-bottom: 1px solid #e1e1e1;

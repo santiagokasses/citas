@@ -1,2 +1,2 @@
-const Boton = (props) => {return(<button class="button elimnar u-full-width">{props.text}</button>)}
+const Boton = (props) => {return(<button className="button elimnar u-full-width">{props.text}</button>)}
 export default Boton
