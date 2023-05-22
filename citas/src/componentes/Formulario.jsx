@@ -3,13 +3,13 @@ import React, { Fragment, useState } from "react"
 const Formulario = () => {
 
 
-    const [mascota, setMascotas] = useState([])
-    const [propietario, setPorpietario] = useState([])
-    const [fecha, setFecha] = useState([])
-    const [hora, setHora] = useState([])
-    const [sintomas, setSintomas] = useState([])
+    const [mascota, setMascotas] = useState("")
+    const [propietario, setPorpietario] = useState("")
+    const [fecha, setFecha] = useState("")
+    const [hora, setHora] = useState("")
+    const [sintomas, setSintomas] = useState("")
 
-    const [citas, setCitas] = useState({
+    const [cita, setCitas] = useState({
         mascota: null,
         propietario: null,
         fecha: null,
@@ -17,25 +17,25 @@ const Formulario = () => {
         sintomas: null
     })
     const updateCitas = (e) => {
-        setCitas({...citas,[e.target.name]:[e.target.value]})
+        setCitas({...cita,[e.target.name]:[e.target.value]})
         if (e.target.name === 'mascota') {
-            console.log(citas)
+            console.log(cita)
             setMascotas(e.target.value)
         }
         if (e.target.name === 'propietario') {
-            console.log(citas)
+            console.log(cita)
             setPorpietario(e.target.value)
         }
         if (e.target.name === 'fecha') {
-            console.log(citas)
+            console.log(cita)
             setFecha(e.target.value)
         }
         if (e.target.name === 'hora') {
-            console.log(citas)
+            console.log(cita)
             setHora(e.target.value)
         }
         if (e.target.name === 'sintomas') {
-            console.log(citas)
+            console.log(cita)
             setSintomas(e.target.value)
         }
     }
