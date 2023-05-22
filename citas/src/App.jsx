@@ -5,6 +5,8 @@ import Formulario from './componentes/Formulario'
 import Textos from './componentes/Textos'
 
 function App() {
+
+  
   let citas = [];
   citas.push({
     mascota: 'Blacky',
@@ -31,12 +33,12 @@ function App() {
   return (
           <header className="App-header">
             <Titulos titulos="ADMINISTRADOR DE PACIENTES" />
-            <div class="container">
-              <div class="row">
-                    <Formulario/>
-                <div class="one-half column">
+            <div className="container">
+              <div className="row">
+                    <Formulario cita={citas}/>
+                <div className="one-half column">
                   <Subtitulos subtitulos="Administra tus citas"/>
-                  <div class="cita">
+                  <div className="cita">
                     <Textos cita={citas}/>
                   </div>
                 </div>

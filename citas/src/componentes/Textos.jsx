@@ -9,7 +9,7 @@ const Textos = (props) => {
             <p>Fecha: <span>{cita.Fecha}</span></p>
             <p>Hora: <span>{cita.Hora}</span></p>
             <p>Sintomas: <span>{cita.Sintomas}</span></p>
-            <button class="button elimnar u-full-width">Eliminar ×</button>
+            <button className="button elimnar u-full-width">Eliminar ×</button>
         </div>
     ))
 }
