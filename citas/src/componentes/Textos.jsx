@@ -1,12 +1,16 @@
+import React from "react"
+
 const Textos = (props) => {
-    return (
-        <div>
-            <p>Mascota: <span>{props.mascota}</span></p>
-            <p>Dueño: <span>{props.Dueno}</span></p>
-            <p>Fecha: <span>{props.Fecha}</span></p>
-            <p>Hora: <span>{props.Hora}</span></p>
-            <p>Sintomas: <span>{props.Sintomas}</span></p>
+    const citas = props.cita;
+    return citas && citas.map((cita) => (
+        <div>    
+            <p>Mascota: <span>{cita.mascota}</span></p>
+            <p>Dueño: <span>{cita.Dueno}</span></p>
+            <p>Fecha: <span>{cita.Fecha}</span></p>
+            <p>Hora: <span>{cita.Hora}</span></p>
+            <p>Sintomas: <span>{cita.Sintomas}</span></p>
+            <button class="button elimnar u-full-width">Eliminar ×</button>
         </div>
-    )
+    ))
 }
 export default Textos
