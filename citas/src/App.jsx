@@ -3,48 +3,48 @@ import Titulos from './componentes/Titulo'
 import Subtitulos from './componentes/Subtitulos'
 import Formulario from './componentes/Formulario'
 import Textos from './componentes/Textos'
+import { useState } from 'react'
 
 function App() {
 
-  
-  let citas = [];
-  citas.push({
-    mascota: 'Blacky',
-    Dueno: 'Jere',
-    Fecha:'2023-05-08',
-    Hora: '16:15',
-    Sintomas: 'No está comiendo'
-  })
-  citas.push({
-    mascota: 'Nina',
-    Dueno: 'Martin',
-    Fecha:'2021-08-05',
-    Hora: '08:20',
-    Sintomas: 'Le duele la pierna'
-  })
-  citas.push({
-    mascota: 'Sifon',
-    Dueno: 'Flecha',
-    Fecha:'2023-06-10',
-    Hora: '09:24',
-    Sintomas: 'Duerme mucho'
-  })
-
+  const [citas, setCitas] = useState([
+    {
+      mascota: 'Blacky',
+      propietario: 'Jere',
+      fecha: '2023-05-08',
+      hora: '16:15',
+      sintomas: 'No está comiendo'
+    },
+    {
+      mascota: 'Nina',
+      propietario: 'Martin',
+      fecha: '2021-08-05',
+      hora: '08:20',
+      sintomas: 'Le duele la pierna'
+    },
+    {
+      mascota: 'Sifon',
+      propietario: 'Flecha',
+      fecha: '2023-06-10',
+      hora: '09:24',
+      sintomas: 'Duerme mucho'
+    }
+  ])
   return (
-          <header className="App-header">
-            <Titulos titulos="ADMINISTRADOR DE PACIENTES" />
-            <div className="container">
-              <div className="row">
-                    <Formulario cita={citas}/>
-                <div className="one-half column">
-                  <Subtitulos subtitulos="Administra tus citas"/>
-                  <div className="cita">
-                    <Textos cita={citas}/>
-                  </div>
-                </div>
-              </div>
+    <header className="App-header">
+      <Titulos titulos="ADMINISTRADOR DE PACIENTES" />
+      <div className="container">
+        <div className="row">
+          <Formulario setCitas={setCitas} />
+          <div className="one-half column">
+            <Subtitulos subtitulos="Administra tus citas" />
+            <div className="cita">
+              <Textos cita={citas} />
             </div>
-          </header>
+          </div>
+        </div>
+      </div>
+    </header>
   )
 }
 

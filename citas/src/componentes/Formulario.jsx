@@ -2,60 +2,40 @@ import React, { Fragment, useState } from "react"
 
 const Formulario = (props) => {
 
-    const [mascota, setMascotas] = useState("")
-    const [propietario, setPorpietario] = useState("")
-    const [fecha, setFecha] = useState("")
-    const [hora, setHora] = useState("")
-    const [sintomas, setSintomas] = useState("")
 
-    const [citas, setCitas] = useState({
-        mascota: null,
-        propietario: null,
-        fecha: null,
-        hora: null,
-        sintomas: null
-    })
-    const updateCitas = (e) => {
-        setCitas({...citas,[e.target.name]:[e.target.value]})
-        if (e.target.name === 'mascota') {
-            console.log(citas)
-            setMascotas(e.target.value)
+    const updateCitas = () => {
+        const nuevaCita = {
+          mascota: document.getElementsByName("mascota")[0].value,
+          propietario: document.getElementsByName("propietario")[0].value,
+          fecha: document.getElementsByName("fecha")[0].value,
+          hora: document.getElementsByName("hora")[0].value,
+          sintomas: document.getElementsByName("sintomas")[0].value,
         }
-        if (e.target.name === 'propietario') {
-            console.log(citas)
-            setPorpietario(e.target.value)
-        }
-        if (e.target.name === 'fecha') {
-            console.log(citas)
-            setFecha(e.target.value)
-        }
-        if (e.target.name === 'hora') {
-            console.log(citas)
-            setHora(e.target.value)
-        }
-        if (e.target.name === 'sintomas') {
-            console.log(citas)
-            setSintomas(e.target.value)
-        }
-    }
-    return(
+        props.setCitas(prevCitas => [...prevCitas, nuevaCita])
+      }
+      const handleSubmit = (e) => {
+        e.preventDefault()
+        updateCitas()
+      }
+
+    return (
         <Fragment>
-           <div className="one-half column">
-            <h2>Crear mi Cita</h2>
-            <form>
-              <label>Nombre Mascota</label>
-              <input type="text" name="mascota" className="u-full-width" placeholder="Nombre Mascota" onChange={(e) => updateCitas(e)}/>
-              <label>Nombre Dueño</label>
-              <input type="text"  name="propietario" className="u-full-width" placeholder="Nombre dueño de la mascota" onChange={(e) => updateCitas(e)}/>
-              <label>Fecha</label>
-              <input type="date" name="fecha" className="u-full-width"onChange={(e) =>updateCitas(e)}/>
-              <label>hora</label>
-              <input type="time" name="hora" className="u-full-width" onChange={(e) => updateCitas(e)}/>
-              <label>Sintomas</label>
-              <textarea name="sintomas" className="u-full-width" onChange={(e) => updateCitas(e)}></textarea>
-              <button type="submit" className="u-full-width button-primary" onClick={()=> props.cita.push({citas})}>Agregar Cita</button>
-            </form>
-          </div>
+            <div className="one-half column">
+                <h2>Crear mi Cita</h2>
+                <form onSubmit={handleSubmit}>
+                    <label>Nombre Mascota</label>
+                    <input type="text" name="mascota" className="u-full-width" placeholder="Nombre Mascota"/>
+                    <label>Nombre Dueño</label>
+                    <input type="text" name="propietario" className="u-full-width" placeholder="Nombre dueño de la mascota"/>
+                    <label>Fecha</label>
+                    <input type="date" name="fecha" className="u-full-width"/>
+                    <label>hora</label>
+                    <input type="time" name="hora" className="u-full-width" />
+                    <label>Sintomas</label>
+                    <textarea name="sintomas" className="u-full-width"/>
+                    <button type="submit" className="u-full-width button-primary">Agregar Cita</button>
+                </form>
+            </div>
         </Fragment>
     )
 }
