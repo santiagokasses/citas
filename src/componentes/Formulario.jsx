@@ -16,6 +16,11 @@ const Formulario = (props) => {
       const handleSubmit = (e) => {
         e.preventDefault()
         updateCitas()
+        document.getElementsByName("mascota")[0].value = ""
+        document.getElementsByName("propietario")[0].value = ""
+        document.getElementsByName("fecha")[0].value = ""
+        document.getElementsByName("hora")[0].value = ""
+        document.getElementsByName("sintomas")[0].value = ""
       }
 
     return (
