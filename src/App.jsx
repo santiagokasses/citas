@@ -38,9 +38,7 @@ function App() {
           <Formulario setCitas={setCitas} />
           <div className="one-half column">
             <Subtitulos subtitulos="Administra tus citas" />
-            <div className="cita">
-              <Textos cita={citas} />
-            </div>
+            <Textos cita={citas} />
           </div>
         </div>
       </div>
