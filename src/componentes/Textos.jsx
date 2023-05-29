@@ -2,9 +2,13 @@ import React from "react"
 
 const Textos = (props) => {
     const citas = props.cita;
+
     const eliminar = (a) => {
-       citas.slice(a-1, a+1)
+        console.log(a)
+        const nuev = citas.splice(a-1, a+1)
+        console.log(nuev)
     }
+
     return citas && citas.map((cita, i) => (
         <div className="cita" key={i}>    
             <p>Mascota: <span>{cita.mascota}</span></p>
@@ -12,7 +16,7 @@ const Textos = (props) => {
             <p>Fecha: <span>{cita.fecha}</span></p>
             <p>Hora: <span>{cita.hora}</span></p>
             <p>Sintomas: <span>{cita.sintomas}</span></p>
-            <button className="button elimnar u-full-width" onClick={eliminar(citas.indexOf(cita))}>Eliminar ×</button>
+            <button className="button elimnar u-full-width" type="button" onClick={() => eliminar(i)}>Eliminar ×</button>
         </div>
     ))
 }
