@@ -29,7 +29,7 @@ function App() {
       sintomas: 'Duerme mucho'
     }
   ]);
-  
+
   return (
     <header className="App-header">
       <Titulos titulos="ADMINISTRADOR DE PACIENTES" />
