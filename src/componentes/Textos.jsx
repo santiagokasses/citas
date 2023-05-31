@@ -5,7 +5,7 @@ const Textos = (props) => {
 
     const eliminar = (a) => {
         console.log(a)
-        const nuev = citas.splice(a-1, a+1)
+        const nuev = citas.splice(a,1)
         console.log(nuev)
     }
 
