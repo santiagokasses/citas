@@ -1,12 +1,13 @@
 import React from "react"
 
 const Textos = (props) => {
-    const citas = props.cita;
+    let citas = props.cita
 
     const eliminar = (a) => {
-        console.log(a)
-        const nuev = citas.splice(a,1)
+        const nuev = [...props.cita]
+        nuev.splice(a,1)
         console.log(nuev)
+        props.setCitas(nuev)
     }
 
     return citas && citas.map((cita, i) => (

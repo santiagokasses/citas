@@ -29,7 +29,8 @@ function App() {
       hora: '09:24',
       sintomas: 'Duerme mucho'
     }
-  ])
+  ]);
+  
   return (
     <header className="App-header">
       <Titulos titulos="ADMINISTRADOR DE PACIENTES" />
@@ -38,7 +39,7 @@ function App() {
           <Formulario setCitas={setCitas} />
           <div className="one-half column">
             <Subtitulos subtitulos="Administra tus citas" />
-            <Textos cita={citas} />
+            <Textos cita={citas} setCitas={setCitas} />
           </div>
         </div>
       </div>
