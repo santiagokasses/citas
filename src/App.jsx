@@ -1,4 +1,3 @@
-import './App.css'
 import Titulos from './componentes/Titulo'
 import Subtitulos from './componentes/Subtitulos'
 import Formulario from './componentes/Formulario'

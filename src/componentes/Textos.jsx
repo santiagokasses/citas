@@ -1,3 +1,4 @@
+import './Textos.css'
 import React from "react"
 
 const Textos = (props) => {

@@ -1,3 +1,4 @@
+import './Formulario.css'
 import React, { Fragment, useState } from "react"
 
 const Formulario = (props) => {
